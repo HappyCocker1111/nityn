@@ -1,0 +1,30 @@
+// Place all the styles related to the thres controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.thre{
+    width:80%;
+    height:70%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
+background: #d4e4ef; /* Old browsers */
+background: -moz-linear-gradient(top, #d4e4ef 0%, #86aecc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #d4e4ef 0%,#86aecc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=0 ); /* IE6-9 */
+    
+    text-align:center;
+    margin-left:8%;
+}
+
+.thre-show-title{
+    padding-top:20px;
+}
+
+.thre-show{
+    font-size:40px;
+    padding-top:15px;
+}
+
+.thre-show-comment-f p{
+ display:inline-block;
+ vertical-align:middle;
+}

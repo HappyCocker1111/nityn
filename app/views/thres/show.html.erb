@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="thre">
+<p class="thre-show-title">
+  <strong class="thre-show"><%= @thre.title %></strong>
+</p>
+
+<%= link_to 'タイトルの編集', edit_thre_path(@thre) %> |
+<%= link_to '戻る', thres_path %>
+<br>
+<br>
+<% @thre.comments.each do |comment| %>
+名前：<strong><%= comment.name %></strong>
+投稿日：<%= comment.created_at.to_formatted_s(:extra_short) %><br>
+<%= comment.content %>
+<%= link_to "削除する", thre_comment_path(@thre, comment), method: :delete, data: { confirm: "本当に削除しますか?" } %> <br>
+<% end %>
+
+<%= form_for @comment, url: thre_comments_path(@thre, @comment) do |f| %>
+  <p class="thre-show-comment-f">
+  名前：<%= f.text_field :name %>｜
+  コメント：  <%= f.text_area :content %><br>
+  </p>
+  <br>
+  <%= f.submit %>
+<% end %>
+</div>

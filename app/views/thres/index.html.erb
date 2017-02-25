@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="thre">
+  <img src="<%= asset_path "thre.png" %>" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Editor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thres.each do |thre| %>
+      <tr>
+        <td><%= thre.title %></td>
+        <td><%= thre.editor %></td>
+        <td><%= thre.created_at.to_formatted_s(:extra_short) %></td>
+        <td><%= link_to 'Show', thre %></td>
+        <td><%= link_to 'Edit', edit_thre_path(thre) %></td>
+        <td><%= link_to 'Destroy', thre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+
+<br>
+
+<%= link_to 'スレッドの新規作成', new_thre_path %>
+
+</div>
